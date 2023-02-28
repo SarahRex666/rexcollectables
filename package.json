@@ -1,0 +1,21 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "Thanks!",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd rcbackend && npm install  && cd ../rcfrontend && npm install && npm run build",
+    "start": "node rcbackend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahRex666/rexcollectables.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarahRex666/rexcollectables/issues"
+  },
+  "homepage": "https://github.com/SarahRex666/rexcollectables#readme"
+}
