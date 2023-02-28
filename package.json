@@ -1,6 +1,9 @@
 {
   "name": "ecom",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.16.0"
+  },
   "description": "Thanks!",
   "main": "index.js",
   "scripts": {
