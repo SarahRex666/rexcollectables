@@ -31,12 +31,10 @@ export default function PaymentMethodScreen() {
     <div>
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <div className="container">
-        <h1 style={{ color: "white" }} className="px-3 py-3">
-          Payment Method
-        </h1>
         <Form onSubmit={submitHandler}>
           <div className="mb-3">
             <Form.Check
+              style={{ color: "white" }}
               type="radio"
               id="PayPal"
               label="PayPal"
@@ -47,6 +45,7 @@ export default function PaymentMethodScreen() {
           </div>
           <div className="mb-3">
             <Form.Check
+              style={{ color: "white" }}
               type="radio"
               id="Stripe"
               label="Stripe"
@@ -55,7 +54,9 @@ export default function PaymentMethodScreen() {
               onChange={(e) => setPaymentMethod(e.target.value)}
             />
           </div>
-          <Button type="submit">Continue</Button>
+          <Button variant="dark" type="submit">
+            Continue
+          </Button>
         </Form>
       </div>
     </div>

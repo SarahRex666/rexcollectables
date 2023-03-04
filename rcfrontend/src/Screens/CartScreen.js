@@ -40,9 +40,6 @@ export default function CartScreen() {
   return (
     <div>
       <Container>
-        <h1 style={{ color: "white" }} className="px-3 py-3">
-          Shopping Cart
-        </h1>
         <Row>
           <Col md={8}>
             {cartItems.length === 0 ? (

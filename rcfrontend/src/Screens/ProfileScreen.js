@@ -57,12 +57,9 @@ export default function ProfileScreen() {
   };
 
   return (
-    <div className="container">
-      <Container>
-        <h1 style={{ color: "white" }} className="my-3">
-          User Profile
-        </h1>
-        <Container style={{ width: "50%" }}>
+    <div>
+      <Container style={{ width: "40%" }}>
+        <Container>
           <form onSubmit={submitHandler}>
             <Form.Group controlId="name">
               <Form.Label style={{ color: "white" }}>Name</Form.Label>

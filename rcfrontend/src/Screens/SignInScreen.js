@@ -40,31 +40,30 @@ export default function SigninScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
-      <h1 style={{ color: "white" }} className="px-3 py-3">
-        Sign In
-      </h1>
+    <Container style={{ width: "40%" }}>
       <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
+        <Form.Group className="my-2" controlId="email">
+          <Form.Label style={{ color: "white" }}>Email</Form.Label>
           <Form.Control
             type="email"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
+        <Form.Group className="my-2" controlId="password">
+          <Form.Label style={{ color: "white" }}>Password</Form.Label>
           <Form.Control
             type="password"
             required
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <div className="mb-3">
-          <Button type="submit">Sign In</Button>
+        <div className="mt-3">
+          <Button variant="dark" type="submit">
+            Sign In
+          </Button>
         </div>
-        <div className="mb-3">
+        <div style={{ color: "grey" }} className="mt-2">
           New customer?{" "}
           <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
         </div>

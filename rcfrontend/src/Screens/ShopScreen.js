@@ -41,9 +41,6 @@ export default function ShopScreen() {
   return (
     <div data-bs-theme="dark">
       <Container className="my-auto d-block">
-        <h1 style={{ color: "white" }} className="py-3">
-          Shop
-        </h1>
         <div>
           {loading ? (
             <LoadingBox />

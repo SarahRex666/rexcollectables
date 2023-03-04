@@ -53,12 +53,9 @@ export default function ShippingAddressScreen() {
     <div>
       <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container">
-        <h1 style={{ color: "white" }} className="px-3 py-3" assName="my-3">
-          Shipping Address
-        </h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
-            <Form.Label>Full Name</Form.Label>
+            <Form.Label style={{ color: "white" }}>Full Name</Form.Label>
             <Form.Control
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
@@ -66,7 +63,7 @@ export default function ShippingAddressScreen() {
             ></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" controlId="address">
-            <Form.Label>Address</Form.Label>
+            <Form.Label style={{ color: "white" }}>Address</Form.Label>
             <Form.Control
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -74,7 +71,7 @@ export default function ShippingAddressScreen() {
             ></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" controlId="city">
-            <Form.Label>City</Form.Label>
+            <Form.Label style={{ color: "white" }}>City</Form.Label>
             <Form.Control
               value={city}
               onChange={(e) => setCity(e.target.value)}
@@ -82,7 +79,7 @@ export default function ShippingAddressScreen() {
             ></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" controlId="postalCode">
-            <Form.Label>Postal Code</Form.Label>
+            <Form.Label style={{ color: "white" }}>Postal Code</Form.Label>
             <Form.Control
               value={postalCode}
               onChange={(e) => setPostalCode(e.target.value)}
@@ -90,7 +87,7 @@ export default function ShippingAddressScreen() {
             ></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" controlId="country">
-            <Form.Label>Country</Form.Label>
+            <Form.Label style={{ color: "white" }}>Country</Form.Label>
             <Form.Control
               value={country}
               onChange={(e) => setCountry(e.target.value)}
@@ -98,7 +95,7 @@ export default function ShippingAddressScreen() {
             ></Form.Control>
           </Form.Group>
           <div className="mb-3">
-            <Button variant="primary" type="submit">
+            <Button variant="dark" type="submit">
               Continue
             </Button>
           </div>

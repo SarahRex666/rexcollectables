@@ -44,13 +44,10 @@ export default function SignUpScreen() {
     }
   }, [navigate, redirect, userInfo]);
   return (
-    <Container className="small-container">
-      <h1 style={{ color: "white" }} className="px-3 py-3">
-        Sign Up
-      </h1>
+    <Container style={{ width: "40%" }}>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Name</Form.Label>
+          <Form.Label style={{ color: "white" }}>Name</Form.Label>
           <Form.Control
             type="name"
             required
@@ -58,7 +55,7 @@ export default function SignUpScreen() {
           ></Form.Control>
         </Form.Group>
         <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label style={{ color: "white" }}>Email</Form.Label>
           <Form.Control
             type="email"
             required
@@ -71,7 +68,7 @@ export default function SignUpScreen() {
           required
           onChange={(e) => setPassword(e.target.value)}
         >
-          <Form.Label>Password</Form.Label>
+          <Form.Label style={{ color: "white" }}>Password</Form.Label>
           <Form.Control type="password" required></Form.Control>
         </Form.Group>
         <Form.Group
@@ -80,13 +77,15 @@ export default function SignUpScreen() {
           required
           onChange={(e) => setConfirmPassword(e.target.value)}
         >
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label style={{ color: "white" }}>Confirm Password</Form.Label>
           <Form.Control type="password" required></Form.Control>
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign Up</Button>
+          <Button variant="dark" type="submit">
+            Sign Up
+          </Button>
         </div>
-        <div>
+        <div style={{ color: "grey" }}>
           Already have an account?{" "}
           <Link to={`/signin?redirect=${redirect}`}>Sign In</Link>
         </div>

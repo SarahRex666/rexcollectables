@@ -139,9 +139,6 @@ export default function OrderScreen() {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
-      <h1 style={{ color: "white" }} className="px-3 py-3">
-        Order {orderId}
-      </h1>
       <Row>
         <Col>
           <Card>
