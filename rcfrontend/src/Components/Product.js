@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import React from "react";
 import axios from "axios";
@@ -28,21 +29,30 @@ function Product(props) {
   };
 
   return (
-    <Card>
+    <Card bg="dark" text="white" style={{ width: "18rem", height: "27rem" }}>
       <Link to={`/product/${product.slug}`}>
-        <img src={product.image} className="card-img-top" alt={product.name} />
+        <Image
+          src={product.image}
+          className="card-img-top"
+          height="250px"
+          alt={product.name}
+        />
       </Link>
-      <Card.Body>
-        <Link to={`/product/${product.slug}`}>
-          <Card.Title>{product.name}</Card.Title>
-        </Link>
+      <Card.Body className="d-flex flex-column">
+        <Card.Title>{product.name}</Card.Title>
         <Card.Text>${product.price}</Card.Text>
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
             Out of stock
           </Button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
+          <Button
+            variant="secondary"
+            className="mt-auto"
+            onClick={() => addToCartHandler(product)}
+          >
+            Add to cart
+          </Button>
         )}
       </Card.Body>
     </Card>

@@ -49,7 +49,9 @@ export default function OrderHistoryScreen() {
 
   return (
     <div>
-      <h1>Order History</h1>
+      <h1 style={{ color: "white" }} className="px-3 py-3">
+        Order History
+      </h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

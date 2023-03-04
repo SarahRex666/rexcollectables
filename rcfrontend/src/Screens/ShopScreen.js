@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useReducer } from "react";
 import axios from "axios";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import Product from "../Components/Product";
 import LoadingBox from "../Components/LoadingBox";
 import MessageBox from "../Components/MessageBox";
@@ -39,23 +39,27 @@ export default function ShopScreen() {
   }, []);
 
   return (
-    <div>
-      <h1>Shop</h1>
-      <div className="products">
-        {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                <Product product={product}></Product>
-              </Col>
-            ))}
-          </Row>
-        )}
-      </div>
+    <div data-bs-theme="dark">
+      <Container className="my-auto d-block">
+        <h1 style={{ color: "white" }} className="py-3">
+          Shop
+        </h1>
+        <div>
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            <Row>
+              {products.map((product) => (
+                <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                  <Product product={product}></Product>
+                </Col>
+              ))}
+            </Row>
+          )}
+        </div>
+      </Container>
     </div>
   );
 }

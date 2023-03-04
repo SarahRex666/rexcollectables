@@ -81,7 +81,9 @@ export default function PlaceOrderScreen() {
   return (
     <div>
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
-      <h1 className="my-3">Preview Order</h1>
+      <h1 style={{ color: "white" }} className="px-3 py-3">
+        Preview Order
+      </h1>
       <Row>
         <Col md={8}>
           <Card className="mb-3">

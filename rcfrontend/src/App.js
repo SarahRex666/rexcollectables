@@ -34,7 +34,7 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <div>
+      <div id="appDiv" className="bg-black">
         <title>Rex Collectables</title>
         <header>
           <Navbar bg="dark" variant="dark">

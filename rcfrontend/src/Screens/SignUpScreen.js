@@ -45,7 +45,9 @@ export default function SignUpScreen() {
   }, [navigate, redirect, userInfo]);
   return (
     <Container className="small-container">
-      <h1 className="my-3">Sign Up</h1>
+      <h1 style={{ color: "white" }} className="px-3 py-3">
+        Sign Up
+      </h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Name</Form.Label>
