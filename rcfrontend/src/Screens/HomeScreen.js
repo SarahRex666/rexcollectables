@@ -1,16 +1,11 @@
 import React from "react";
-import { Col, Image } from "react-bootstrap";
+import { Row, Container, Image, Col } from "react-bootstrap";
 
 function HomeScreen() {
   return (
-    <div>
-      <Col sm={2} className="m-auto">
-        <Image
-          src="https://i.ibb.co/XJq5fvp/rex-2.png"
-          className="rounded my-auto d-block"
-        />
-      </Col>
-    </div>
+    <Container className="d-flex align-items-center justify-content-center ">
+      <Image src="https://i.ibb.co/XJq5fvp/rex-2.png" />
+    </Container>
   );
 }
 export default HomeScreen;

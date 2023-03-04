@@ -37,7 +37,7 @@ function App() {
       <div id="appDiv" className="bg-black">
         <title>Rex Collectables</title>
         <header>
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="black" variant="dark">
             <Container>
               <Navbar.Brand>Rex Collectables</Navbar.Brand>
               <Nav>
